@@ -113,9 +113,9 @@ body{
     padding: 0;
     margin: 0;
     overflow: hidden;
-    width: 6ch;
+    width: 8ch;
     text-decoration: underline;
-    animation: typing 2s steps(6) infinite alternate-reverse;
+    animation: typing 2s steps(100) infinite alternate-reverse;
 }
 @keyframes typing {
     from{

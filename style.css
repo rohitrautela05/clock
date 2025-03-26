@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+#clockcontainer{
+    position: relative;
+    margin: auto;
+    height:30vw;
+    width: 30vw;
+    background-image: url('clock.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#hour,#minute,#second{
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+
+#hour{
+    width: 2%;
+    height: 25%;
+    top: 25%;
+    left: 49%;
+}
+
+#minute{
+    width: 1.5%;
+    height: 35%;
+    top: 15%;
+    left: 49.25%;
+}
+
+#second{
+    width: 1%;
+    height: 40%;
+    top: 10%;
+    left: 49.5%;
+}
+
+body{
+    margin-top: 10vh;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid black;
+    height: 10vw;
+    
+}
+.digitalclock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.display{
+    border: 4px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vw;
+    width: 60vw;
+    font-size: 7vw;
+    font-family:'Orbitron';
+}
+.cdate{
+    border: 4px solid black;
+    /* border: 2px solid black; */
+    display: flex;
+    height: 10vw;
+    width: 20vw;
+}
+.year{
+    height: 10vw;
+    width: 20vw;
+    border: 4px solid black;
+    font-size: 8vw;
+}
+.datemonth{
+    display: flex;
+    flex-wrap: wrap;
+    height: 10vw;
+    width: 10vw;    
+    font-size: 4vw;
+    overflow: hidden;
+}
+.month,.day{
+    /* align-items: center; */
+    text-align: left;
+    margin-left: 1vw;
+}
+.date{
+    height: 10vw;
+    width: 9vw;    
+    text-align: right;
+    font-size: 8vw;
+    padding-right: 0;
+}
+.name{
+    position: absolute;
+    top: 0;
+    margin-left: 43.5%;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.actualname{
+    font-family:'Orbitron';
+    font-size: 3vw;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    width: 6ch;
+    text-decoration: underline;
+    animation: typing 2s steps(6) infinite alternate-reverse;
+}
+@keyframes typing {
+    from{
+        width: 0ch;
+    }
+    
+}

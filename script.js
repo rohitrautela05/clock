@@ -1,6 +1,6 @@
 const days = ["SUN","MON", "TUE","WED", "THU", "FRI", "SAT"]
 //month
-const months = ["JAN","FEb","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC",];
+const months = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC",];
 setInterval(()=>{
     d=new Date();
     hours=d.getHours();
@@ -9,7 +9,8 @@ setInterval(()=>{
     
     //add zero at start
     ampm=hours>=12?' PM':' AM';
-    hours=hours%12;
+    hours=hours===12?hours:hours%12;
+    // hours=hours%12;
     hours=hours<10 ? '0'+hours:hours;
     mins=mins<10 ? '0'+mins:mins;
     secs=secs<10 ? '0'+secs:secs;
@@ -21,7 +22,10 @@ setInterval(()=>{
     hour.style.transform=`rotate(${hrotate}deg)`
     minute.style.transform=`rotate(${mrotate}deg)`
     second.style.transform=`rotate(${srotate}deg)`
-    let month=
+    //click sound
+    var audio=document.createElement('audio')
+    audio.setAttribute('src','sound.mp3')
+    audio.play();
 
     //day
     // update the time on digital wali ghadi
